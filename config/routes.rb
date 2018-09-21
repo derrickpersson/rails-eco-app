@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   namespace :Api do
     namespace :V1 do
-      resources :users, only: [:index], controller: '/api/v1/users'
+      resources :users, only: [:index, :create], controller: '/api/v1/users'
     end
   end
 end
