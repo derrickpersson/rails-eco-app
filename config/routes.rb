@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index, :create], controller: '/api/v1/users'
+      resources :quizzes, only: [:index, :show], controller: '/api/v1/quizzes'
     end
   end
 end

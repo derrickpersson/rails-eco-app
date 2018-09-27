@@ -29,11 +29,17 @@ Quiz.destroy_all
     question: "How many times do you cycle in a week?"
 })
 
+@quiz_question2 = @quiz.quiz_questions.create!({
+    question: "Do you own a car?"
+})
+
 @answer = Answer.create!({
     quiz_question_id: @quiz_question.id,
     user_id: @user.id,
     answer: "5"
 })
+
+puts "Done"
 
 # @quiz2 = Quiz.create!({
 #     name: "Home v1",
