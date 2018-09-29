@@ -8,10 +8,6 @@ class Api::V1::QuizzesController < ApplicationController
         @quiz_questions = QuizQuestion.where("quiz_id = #{@quiz.id}")
         hash = Hash.new
         hash[:quiz] = @quiz.as_json
-        puts hash
-        for i in hash
-            puts "#{i}"
-        end
         hash[:quiz][:questions] = @quiz_questions
         render json: hash
     end

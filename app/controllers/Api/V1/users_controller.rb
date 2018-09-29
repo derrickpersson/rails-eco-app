@@ -9,4 +9,6 @@ class Api::V1::UsersController < ApplicationController
         @user.save
         render json: @user, status: status
     end
+
+
 end

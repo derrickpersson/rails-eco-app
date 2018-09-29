@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'home#index'
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:index, :create], controller: '/api/v1/users'
+      resources :users, only: [:index, :create], controller: '/api/v1/users' do
+        resources :quizzes, only: [:index, :show], controller: '/api/v1/answers'
+      end
       resources :quizzes, only: [:index, :show], controller: '/api/v1/quizzes'
     end
   end
