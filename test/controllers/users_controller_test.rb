@@ -5,7 +5,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
 
-    test "can authenticate user on show" do
-      User.show 
-    end
+  # test "can authenticate user on show" do
+  #   User.show 
+  # end
 end
